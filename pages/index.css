@@ -7,7 +7,7 @@
 @import url(../blocks/card.css);
 @import url(../blocks/footer.css);
 
-@media screen and (min-width: 617px) and (max-width: 999px) {
+@media screen and (min-width: 751px) and (max-width: 999px) {
 	.page {
 		width: calc(100%-40px);
 		margin: 0 20px;
@@ -36,9 +36,21 @@
 	.card:nth-child(even) {
 		margin-right: auto;
 	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: 282px 282px;
+		grid-gap: 17px;
+		margin: 67px auto 0;
+	}
 }
 
 @media screen and (min-width: 617px) and (max-width: 750px) {
+	.page {
+		width: calc(100%-40px);
+		margin: 0 20px;
+	}
+
 	.profile {
 		flex-wrap: wrap;
 	}
@@ -46,6 +58,31 @@
 	.profile__add-button {
 		margin: auto;
 		width: 282px;
+	}
+
+	.gallery {
+		margin: auto;
+		justify-items: center;
+	}
+	.gallery__cards {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+
+	.card:nth-child(odd) {
+		margin-left: auto;
+	}
+
+	.card:nth-child(even) {
+		margin-right: auto;
+	}
+
+	.footer {
+		display: grid;
+		grid-template-columns: 282px 282px;
+		grid-gap: 17px;
+		margin: 47px auto 0;
+		justify-self: center;
 	}
 }
 
@@ -89,6 +126,11 @@
 		grid-template-columns: 1fr;
 		justify-items: center;
 	}
+	.footer {
+		margin-bottom: 36px;
+		margin-left: 20px;
+		margin-top: 48px;
+	}
 }
 
 @media screen and (max-width: 470px) {
@@ -130,5 +172,11 @@
 		grid-template-columns: 1fr;
 		justify-items: center;
 		min-width: 282px;
+	}
+
+	.footer {
+		margin-bottom: 36px;
+		margin-left: 20px;
+		margin-top: 48px;
 	}
 }
