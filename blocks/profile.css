@@ -54,6 +54,10 @@
 	grid-area: button;
 }
 
+.profile__edit-button:hover {
+	opacity: 0.6;
+}
+
 .profile__edit-button-icon {
 	height: 10px;
 	width: 10px;
@@ -65,6 +69,10 @@
 	background-color: black;
 	border: solid 2px white;
 	margin-left: auto;
+}
+
+.profile__add-button:hover {
+	opacity: 0.6;
 }
 
 .profile__add-button-icon {
