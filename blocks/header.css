@@ -5,3 +5,9 @@
 
 .logo {
 }
+
+@media screen and (max-width: 470px) {
+	.header {
+		margin-left: 27px;
+	}
+}
