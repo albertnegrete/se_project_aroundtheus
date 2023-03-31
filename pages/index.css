@@ -1,33 +1,97 @@
 @import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
-@import url(../blocks/content.css);
-@import url(../blocks/cards.css);
+@import url(../blocks/profile.css);
+@import url(../blocks/gallery.css);
+@import url(../blocks/card.css);
 @import url(../blocks/footer.css);
 
-@font-face {
-	font-family: "Inter";
-	font-style: normal;
-	font-weight: 500;
-	font-display: swap;
-	src: url("../vendor/fonts/Inter-Medium.woff2") format("woff2"),
-		url("../vendor/fonts/Inter-Medium.woff") format("woff");
+@media screen and (min-width: 617px) and (max-width: 999px) {
+	.page {
+		width: calc(100%-40px);
+		margin: 0 20px;
+	}
+
+	.gallery {
+		margin: auto;
+		justify-items: center;
+	}
+
+	.gallery__cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.card:nth-child(odd) {
+		margin-left: auto;
+	}
+
+	.card:nth-child(even) {
+		margin-right: auto;
+	}
 }
 
-@font-face {
-	font-family: "Inter";
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url("../vendor/fonts/Inter-Regular.woff2") format("woff2"),
-		url("../vendor/fonts/Inter-Regular.woff") format("woff");
+@media screen and (min-width: 471px) and (max-width: 617px) {
+	.page {
+		width: calc(100%-40px);
+		margin: 0 20px;
+		justify-content: center;
+	}
+
+	.profile__title {
+		font-size: 2em;
+	}
+
+	.profile__description {
+		font-size: 1.5em;
+	}
+
+	.gallery {
+		margin: auto;
+	}
+
+	.gallery__cards {
+		grid-template-columns: 1fr;
+		justify-items: center;
+	}
 }
 
-@font-face {
-	font-family: "Inter";
-	font-style: normal;
-	font-weight: 900;
-	font-display: swap;
-	src: url("../vendor/fonts/Inter-Black.woff2") format("woff2"),
-		url("../vendor/fonts/Inter-Black.woff") format("woff");
+@media screen and (max-width: 470px) {
+	.header {
+		margin-left: 27px;
+	}
+
+	.profile {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.profile__info {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.profile__title {
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.profile__description {
+		font-size: 1.5em;
+		width: 100%;
+		text-align: center;
+	}
+
+	.profile__add-button {
+		margin: auto;
+		width: 282px;
+	}
+
+	.gallery__cards {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		min-width: 282px;
+	}
 }
