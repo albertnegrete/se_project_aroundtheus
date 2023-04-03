@@ -1,5 +1,4 @@
 .card {
-	width: 282px;
 	display: grid;
 	grid-template-columns: 1fr;
 	border-radius: 5%;
@@ -58,17 +57,7 @@
 	width: 21px;
 }
 
-@media screen and (min-width: 751px) and (max-width: 999px) {
-	.card:nth-child(odd) {
-		margin-left: auto;
-	}
-
-	.card:nth-child(even) {
-		margin-right: auto;
-	}
-}
-
-@media screen and (min-width: 617px) and (max-width: 750px) {
+@media screen and (min-width: 617px) and (max-width: 999px) {
 	.card:nth-child(odd) {
 		margin-left: auto;
 	}
