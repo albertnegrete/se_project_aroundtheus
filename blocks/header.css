@@ -2,12 +2,17 @@
 	margin-top: 45px;
 	max-width: 880px;
 	padding-bottom: 41px;
-	border-bottom: solid 1px #545454;
+	border-bottom: solid 1px rgba(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 470px) {
 	.header {
+		margin-top: 28px;
 		padding-left: 27px;
-		padding-bottom: 41px;
+		padding-bottom: 32px;
+	}
+	.header__logo {
+		height: 24px;
+		width: 126px;
 	}
 }
