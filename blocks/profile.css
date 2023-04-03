@@ -103,6 +103,7 @@
 @media screen and (max-width: 750px) {
 	.profile {
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	.profile__pic {
@@ -111,9 +112,6 @@
 	.profile__add-button {
 		margin: auto;
 		width: 282px;
-	}
-	.profile {
-		flex-wrap: wrap;
 	}
 }
 
