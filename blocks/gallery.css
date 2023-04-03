@@ -22,21 +22,12 @@
 	}
 
 	.gallery__cards {
+		grid-template-columns: repeat(2, 1fr);
 		justify-items: center;
 	}
 }
 
-@media screen and (max-width: 999px) {
-	.gallery__cards {
-		grid-template-columns: repeat(2, 1fr);
-	}
-}
-
 @media screen and (max-width: 617px) {
-	.gallery {
-		margin: auto;
-	}
-
 	.gallery__cards {
 		grid-template-columns: 1fr;
 	}
