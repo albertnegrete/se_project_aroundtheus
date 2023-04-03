@@ -22,7 +22,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **GitHub**
 
-[Link to github](https://github.com/albertnegrete/se_project_aroundtheus.git)
+[Link to github](https://github.com/albertnegrete/se_project_aroundtheus)
 
 **Project Features**
 
