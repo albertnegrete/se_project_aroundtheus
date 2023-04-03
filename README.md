@@ -5,6 +5,7 @@
 - Intro
 - Figma
 - Images
+- Project Features
 
 **Intro**
 
@@ -16,9 +17,17 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Images**
 
-[Desktop view] (./images/screenshot-desktop.png)
-[Mobile view] (./images/screenshot-mobile.png)
+[Desktop view](./images/screenshot-desktop.png)
+[Mobile view](./images/screenshot-mobile.png)
 
 **GitHub**
 
-Link to github: https://github.com/albertnegrete/se_project_aroundtheus.git
+[Link to github](https://github.com/albertnegrete/se_project_aroundtheus.git)
+
+**Project Features**
+
+- HTML
+- CSS
+- Display Grid
+- Flexbox
+- Media Queries
