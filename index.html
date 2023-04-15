@@ -49,6 +49,7 @@
 						<button
 							type="button"
 							class="profile__edit-button"
+							id="profile-edit-button"
 						>
 							<img
 								class="profile__edit-button-icon"
@@ -198,9 +199,15 @@
 				<p class="footer__note">© 2022 Around The U.S.</p>
 			</footer>
 		</div>
-		<div class="modal">
+		<div
+			class="modal"
+			id="profile-edit-modal"
+		>
 			<div class="modal__container">
-				<button class="modal__close"></button>
+				<button
+					class="modal__close"
+					id="modal-close"
+				></button>
 				<p class="modal__heading">Edit Profile</p>
 				<form class="modal__form">
 					<input
