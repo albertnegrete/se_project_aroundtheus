@@ -228,7 +228,28 @@
 				</form>
 			</div>
 		</div>
-
+		<template id="card-template">
+			<li class="card">
+				<img
+					class="card__image"
+					src="./images/card-images/yosemite.jpg"
+					alt="Yosemite Valley"
+				/>
+				<div class="card__description">
+					<h2 class="card__title">Yosemite Valley</h2>
+					<button
+						class="card__like-button"
+						type="button"
+					>
+						<img
+							class="card__like-icon"
+							src="./images/icons/heart.svg"
+							alt="like"
+						/>
+					</button>
+				</div>
+			</li>
+		</template>
 		<script src="./scripts/index.js"></script>
 	</body>
 </html>
