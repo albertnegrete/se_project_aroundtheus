@@ -3,6 +3,25 @@
 	grid-template-columns: 1fr;
 	border-radius: 5%;
 	overflow: hidden;
+	position: relative;
+}
+
+.card__delete-button {
+	height: 19.3px;
+	width: 18px;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(../images/icons/Trash.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 18px;
+	right: 15px;
+	z-index: 1;
+	border: 0;
+}
+
+.card__delete-button:hover {
+	background-image: url(../images/icons/TrashHover.svg);
 }
 
 .card__image {
