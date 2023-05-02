@@ -15,6 +15,18 @@
 	display: flex;
 }
 
+.modal_hidden_transition {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.modal_visible_transition {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.5s ease-in-out;
+}
+
 .modal__container {
 	padding: 36px;
 	border-radius: 10px;
@@ -93,6 +105,42 @@
 
 .modal__button:hover {
 	opacity: 0.8;
+}
+
+.modal__large-container {
+	width: 75vw;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.modal__preview-container {
+	padding: 0;
+	margin: 0;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	max-width: 75vw;
+	max-height: 75vh;
+}
+
+.modal__preview-title {
+	font-family: Inter, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 15px;
+	letter-spacing: 0em;
+	text-align: left;
+
+	position: absolute;
+	bottom: -10px;
+	left: 0;
 }
 
 @media screen and (max-width: 617px) {

@@ -42,6 +42,10 @@ const profileEditForm = profileEditModal.querySelector("#profile-edit-form");
 const cardTemplate =
 	document.querySelector("#card-template").content.firstElementChild;
 const cardListEl = document.querySelector(".gallery__cards");
+const previewImageModal = document.querySelector("#preview-image-modal");
+const previewImageModalCloseButton = document.querySelector(
+	"#preview-modal-close"
+);
 
 //new card modal
 
@@ -62,10 +66,14 @@ const cardLinkInput = addCardFormEl.querySelector("#input-url");
 
 function openModal(modal) {
 	modal.classList.add("modal_opened");
+	modal.classList.remove("modal_hidden_transition");
+	modal.classList.add("modal_visible_transition");
 }
 
 function closeModal(modal) {
 	modal.classList.remove("modal_opened");
+	modal.classList.remove("modal_visible_transition");
+	modal.classList.add("modal_hidden_transition");
 }
 
 function getCardElement(cardData) {
@@ -74,12 +82,25 @@ function getCardElement(cardData) {
 	const cardTitleEl = cardElement.querySelector(".card__title");
 	const likeButton = cardElement.querySelector(".card__like-button");
 	const deleteButton = cardElement.querySelector("#card-delete-button");
+	const previewImageModalContainer = previewImageModal.querySelector(
+		".modal__preview-container"
+	);
+	const modalPreviewTitle = previewImageModal.querySelector(
+		".modal__preview-title"
+	);
 
 	deleteButton.addEventListener("click", () => {
 		cardElement.remove();
 	});
 
+	cardImageEl.addEventListener("click", () => {
+		openModal(previewImageModal);
+		previewImageModalContainer.style.backgroundImage =
+			"url(" + cardImageEl.src + ")";
+		modalPreviewTitle.textContent = cardTitleEl.textContent;
+	});
 	//add click listener to cardImage
+	//card image size
 	//open modal previewImageModal
 
 	likeButton.addEventListener("click", () => {
@@ -130,6 +151,10 @@ profileEditButton.addEventListener("click", () => {
 
 profileEditModalCloseButton.addEventListener("click", () => {
 	closeModal(profileEditModal);
+});
+
+previewImageModalCloseButton.addEventListener("click", () => {
+	closeModal(previewImageModal);
 });
 
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
