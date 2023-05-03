@@ -66,14 +66,10 @@ const cardLinkInput = addCardFormEl.querySelector("#input-url");
 
 function openModal(modal) {
 	modal.classList.add("modal_opened");
-	modal.classList.remove("modal_hidden_transition");
-	modal.classList.add("modal_visible_transition");
 }
 
 function closeModal(modal) {
 	modal.classList.remove("modal_opened");
-	modal.classList.remove("modal_visible_transition");
-	modal.classList.add("modal_hidden_transition");
 }
 
 function getCardElement(cardData) {
@@ -138,6 +134,8 @@ function handleAddCardFormSubmit(e) {
 		link,
 	});
 	cardListEl.prepend(cardElement);
+	const modalFormInputs = newCardModal.querySelectorAll(".modal__form-input");
+	modalFormInputs.forEach((input) => (input.value = ""));
 	closeModal(newCardModal);
 }
 

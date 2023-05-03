@@ -6,25 +6,22 @@
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 999;
-	display: none;
+	display: block;
+	height: 0;
+	width: 0;
+	overflow: hidden;
 	align-items: center;
 	justify-content: center;
+	opacity: 0;
+	transition: height 0s 0.4ms, opacity 0.1s 0.5s ease-in-out;
 }
 
 .modal_opened {
 	display: flex;
-}
-
-.modal_hidden_transition {
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
-}
-
-.modal_visible_transition {
+	height: 100%;
+	width: 100%;
 	opacity: 1;
-	visibility: visible;
-	transition: opacity 0.5s ease-in-out;
+	transition: height 0.1s 0.1s, opacity 0.1s 0.5s ease-in-out;
 }
 
 .modal__container {
